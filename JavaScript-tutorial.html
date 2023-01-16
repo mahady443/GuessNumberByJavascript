@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial </title>  
+    </head>
+<input>
+
+    <!--Javascript o amra 3 vabe likte pari aslike css-->
+    <button onclick="alert('Hi Mahady.I Know U can do something in ur life.Faith on allah ')" >Advice</button>
+    <!-- javascript er sheshe amra ; dite o pari nao dite pari eita optional -->
+    <!--Amra jehutu debugging dekte pari na ide te error asle amra bujte parbo na j
+    kono error ace kina so amra check korte pari google chrome er inspect er console tab e
+    jaiya dekte pari kono error ace kina ba amra javascript check korte pari
+    -->
+    
+    <!--Accessing element-->
+    <p id="text">Hello World </p>
+    <button id="changetext">Change text </button>
+    <p id="text2">JavaScript is really .......</p>
+    <button id="changetext2">append text</button>
+    <p id="empty"></p>
+    <button id="changetext3">add text</button>
+    <p id="style">Some Stylish text</p>
+    <button id="style-button">Change to Style</button>
+
+    <p><input type="text" id="textInput" ></p>
+    <button id="but">submit</button>
+    <p id="text5"></p>
+
+    <p>What is the magic word ?</p>
+    <input type="text" id="magic"> </input>
+    <button id="check-magic-word">submit</button>
+
+
+
+    <script type="text/javascript">
+        
+        //alert('page loaded')
+        // single line comment er jonno 
+        /*
+        multiline comment er jonno
+        */
+        
+       /*
+       kono kicu change korte ei code use kora hoi
+        document.getElementById("text").innerHTML ="Hi Mahady"
+    */
+   // click er por kono kicu change korte ei code use kora hoi
+    document.getElementById("changetext").onclick=function(){
+        document.getElementById("text").innerHTML="Hello Mahady";
+    }
+    // concating k append text bole javascript e 
+    document.getElementById("changetext2").onclick=function(){
+        document.getElementById("text2").innerHTML="I think "+ document.getElementById("text2").innerHTML+" fun to do";
+    }
+    // amra html o use korte parbo inline javascript e
+    document.getElementById("changetext3").onclick=function(){
+        document.getElementById("empty").innerHTML="<h1> Hi THERE </h1>";    
+    }
+    //amra css o change korte parbo
+    document.getElementById("style-button").onclick=function(){
+        document.getElementById("style").style.color="red";
+        //chage font-size
+        document.getElementById("style").style.fontSize="50px";
+        //document.getElementById("style").style.display="none";
+    }
+
+    document.getElementById("but").onclick=function(){
+        var textEnter= "";
+        textEnter=document.getElementById("textInput").value;
+        alert("Text Enputed");
+        document.getElementById("text5").innerHTML=textEnter;
+    }  
+    // create array of javascript like java ?????    
+        var myArray= new Array();
+        myArray[0]= "Pizza";
+        myArray[1]= "Chocolate";
+        //alert(myArray[0]);
+        //console.log(myArray);
+        // r ek vabe array declare kora jai
+        var tweets = ["Hello world!", "I love Coffee!"];
+        
+        // add elements to array
+        tweets.push("YO Whats UP! ");
+        console.log(tweets);
+        // delete elements from array and amra ro add o korte pari replace o korte pari
+        // slice key word e amra bolbo konta korte chai koto num
+        // delete na koira add korte chaile (1,0,"")  first index_num,koita,add
+        tweets.splice(1,1,"WHY GOOD MORNING ?");
+        // if else condition
+        /*var x= 2;
+        if(x== 1){
+            alert("x is 1");
+        } else{
+        alert("x is not 1");
+        }*/
+        document.getElementById("check-magic-word").onclick=function(){
+            var magicWordEntered=document.getElementById("magic").value;
+            var magicWord = "I love Magic";
+            if(magicWordEntered==magicWord){
+            alert("You guess it right");
+            
+            }
+            else{
+                alert("WHat u think magic word is i love u. U live in B.C man . Grow Up");
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
